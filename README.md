@@ -12,6 +12,7 @@ The system includes:
 - **Trust score calculation** and malicious behavior detection
 - **Smart contracts** on Solana blockchain
 - **Monitoring and logging** of vehicle behaviors and transactions
+- **Dynamic frontend to interact with vehicles and platoons**
 
 ---
 
@@ -20,7 +21,7 @@ The system includes:
 | Folder | Description |
 |:-------|:------------|
 | `backend/` | Flask API server + SUMO interface + blockchain integration |
-| `frontend/` | React frontend for live vehicle tracking |
+| `frontend/` | React frontend for live vehicle tracking and node management |
 | `sumo/` | SUMO network and route configuration files |
 | `solana-smart-contract/` | Solana smart contracts (vehicle node, platoon manager, etc.) |
 | `monitoring_results/` | Output graphs and monitoring data |
@@ -106,7 +107,20 @@ npm start
 ```
 http://localhost:3000
 ```
-It will show real-time vehicle movement on the map!
+
+### 🌐 Frontend Features
+
+- Displays real-time vehicle movement on a live map
+- Each vehicle is clickable
+- Clicking a vehicle opens its **Node View** page, showing:
+  - Wallet address
+  - Trust score
+  - Behavior status
+  - Ability to **submit updated trust score** to the blockchain
+  - Ability to **request to join a platoon** dynamically
+- Platoon Managers can monitor and approve vehicle requests inside the **Platoon Dashboard**
+
+**All interactions are dynamic** and based on real-time simulation data.
 
 ---
 
@@ -152,7 +166,15 @@ Where:
 | `--update-interval 15` | How often (in seconds) to update vehicle trust scores |
 | `--vehicle-prefix veh` | Prefix used for vehicle IDs in SUMO |
 
-✅ Monitoring results (e.g., graphs, JSON logs) will be saved inside `monitoring_results/`.
+### 🔄 Automatic Monitoring Behavior
+
+- Vehicle trust scores are updated automatically.
+- Behavior evaluation and ZKP generation are handled in the backend.
+- Vehicles automatically request to join platoons if eligible.
+- Smart contracts are updated in real-time without user intervention.
+- Monitoring results (plots and JSON data) are saved into `monitoring_results/`.
+
+> **User does not need to manually click anything for monitoring to happen.**
 
 ---
 
@@ -177,4 +199,6 @@ All plots are automatically generated after simulation ends!
 | Start frontend React app | `npm start` inside `frontend/` |
 | Deploy smart contracts | `anchor deploy` inside `solana-smart-contract/` |
 | Run monitoring script | `python3 backend/vehicle_monitor.py --duration 6000 --update-interval 15 --vehicle-prefix veh` |
+
+---
 
