@@ -1,0 +1,29 @@
+# Python
+backend/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Node.js
+frontend/node_modules/
+frontend/build/
+
+# SUMO simulation temporary files
+sumo/*.bak
+sumo/*.tmp
+
+# Solana Anchor Build
+solana-smart-contract/target/
+solana-smart-contract/.anchor/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variables (if any)
+*.env
+
+# VSCode and JetBrains IDE folders
+.vscode/
+.idea/

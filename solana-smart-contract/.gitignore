@@ -1,0 +1,16 @@
+# Ignore global Anchor build folders
+target/
+.anchor/
+
+# Ignore specific programs build folders
+programs/platoon_manager/node_modules/
+programs/platoon_manager/target/
+programs/vehicle_node_chain/node_modules/
+programs/vehicle_node_chain/target/
+
+# Ignore extra files you mentioned
+buffer.txt
+close_all_buffers.sh
+
+# Mac system files
+.DS_Store

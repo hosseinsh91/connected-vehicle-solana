@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+    <input>
+        <net-file value="osm.net.xml"/>
+        <route-files value="osm.passenger.routes.xml"/>
+        <additional-files value="osm.poly.xml"/>
+    </input>
+    <processing>
+        <ignore-route-errors value="true"/>
+        <tls.actuated.jam-threshold value="30"/>
+        <step-length value="0.1"/>
+    </processing>
+    <routing>
+        <device.rerouting.probability value="0.0"/>
+        <device.rerouting.period value="0"/>
+    </routing>
+    <traci_server>
+        <remote-port value="5001"/>
+    </traci_server>
+    <time-to-teleport value="-1"/>
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+        <no-warnings value="true"/>
+    </report>
+</configuration>

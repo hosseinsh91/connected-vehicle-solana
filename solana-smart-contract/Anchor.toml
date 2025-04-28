@@ -1,0 +1,23 @@
+[features]
+seeds = false
+skip-lint = false
+
+
+[workspace]
+members = [
+  "programs/vehicle_node_chain",
+  "programs/platoon_manager",
+]
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[programs.localnet]
+vehicle_node_chain = "8kbW2B8DZHTjZNi15hwnPsv3pvgEnBhwwc7ddFE7wdUj"
+platoon_manager = "76P6QSa7gYuM9wm45KMf24qNVBAJHUAixEAgLiMiMBYn"
+
+
+
+
+

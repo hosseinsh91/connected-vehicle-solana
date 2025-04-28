@@ -1,0 +1,36 @@
+.container {
+    text-align: center;
+}
+
+.control-panel {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-panel button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.control-panel button:hover {
+    background-color: #0056b3;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.leaflet-container {
+    width: 500px;  /* Adjust to your preferred size */
+    height: 500px; /* Ensure equal width and height for a square */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    border: 2px solid #ccc; /* Optional: Adds a border */
+}
