@@ -14,8 +14,8 @@ cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [programs.localnet]
-vehicle_node_chain = "8kbW2B8DZHTjZNi15hwnPsv3pvgEnBhwwc7ddFE7wdUj"
-platoon_manager = "76P6QSa7gYuM9wm45KMf24qNVBAJHUAixEAgLiMiMBYn"
+vehicle_node_chain = ""
+platoon_manager = ""
 
 
 
