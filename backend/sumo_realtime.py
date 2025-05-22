@@ -57,8 +57,8 @@ UTM_ZONE = 30
 IS_NORTHERN = True
 
 # Program IDs (Blockchain)
-VEHICLE_PROGRAM_ID = PublicKey.from_string("8kbW2B8DZHTjZNi15hwnPsv3pvgEnBhwwc7ddFE7wdUj")
-PLATOON_PROGRAM_ID = PublicKey.from_string("76P6QSa7gYuM9wm45KMf24qNVBAJHUAixEAgLiMiMBYn")
+VEHICLE_PROGRAM_ID = PublicKey.from_string("")
+PLATOON_PROGRAM_ID = PublicKey.from_string("")
 SYSTEM_PROGRAM_ID = PublicKey.from_bytes(b58decode("11111111111111111111111111111111"))
 # Note: GLOBAL_REWARD_PROGRAM_ID is referenced but not defined here
 
