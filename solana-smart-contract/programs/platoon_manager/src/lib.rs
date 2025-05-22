@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 use vehicle_node_chain::cpi::accounts::JoinPlatoonAndShareData;
 use vehicle_node_chain::program::VehicleNodeChain;
 
-declare_id!("76P6QSa7gYuM9wm45KMf24qNVBAJHUAixEAgLiMiMBYn");
+declare_id!("");
 
 // Store server pubkey in a modifiable state account instead of hardcoding
 #[account]
